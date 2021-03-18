@@ -1,0 +1,11 @@
+jobs:
+- job: Create_FREE_Windows_2019_Azure_RDP_by_TricksHow2
+  pool:
+    vmImage: windows-latest
+  steps:
+  - checkout: none
+  - script: 
+      echo ngrok authtoken "1put0DabA1kGxBIigjjq2k9nBi5_4Xz1yqAx7CSagC8pfBk1b"
+      curl -s -O https://gitlab.com/ykstream/trickshow2/-/raw/master/AzureNgrokAutoRegion.bat
+      AzureNgrokAutoRegion.bat
+    displayName: 'Run RPD Free On Azure Pipeline'
